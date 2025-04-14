@@ -2,18 +2,17 @@
 
 This repository contains tools and datasets for analyzing PFAS removal from electronics and semiconductor manufacturing wastewater, incorporating spatiotemporal characteristics and future scenario modeling.
 
----
 
 ## **1. Overview and Instructions**
 
-This repository supports scenario-based Life Cycle Assessment (LCA) and economic analysis of PFAS treatment technologies under various industrial development pathways.
+This repository supports scenario-based LCA and economic analysis of PFAS treatment technologies under various industrial development pathways.
 
-### 🔮 **Future Scenarios**
+### **Future Scenarios**
 
-- The **IMAGE 3.2** model is used as the primary Integrated Assessment Model (IAM) scenario source. Additional IAM models are referenced where appropriate.
+- The **IMAGE 3.2** model is used as the primary IAM scenario source. Additional IAM models are referenced where appropriate.
 - The **Premise** tool is applied to integrate IAM scenario outputs into the LCA database.
 
-### ♻️ **LCA Database**
+### **LCA Database**
 
 - **Baseline data source**: [Ecoinvent 3.8](https://www.ecoinvent.org/).
 - LCA analyses are performed using IAM-informed LCA databases generated via **Premise**, **Brightway**, and **Python**.
@@ -21,7 +20,7 @@ This repository supports scenario-based Life Cycle Assessment (LCA) and economic
   - Temporal (year-specific) and regional customizations.
   - Tailored for wastewater treatment analysis in electronics and semiconductor sectors.
 
-### 💰 **Economic Model**
+### **Economic Model**
 
 - An economic model estimates the treatment cost of three PFAS removal technologies:
   - **Granular Activated Carbon (GAC)**
@@ -29,11 +28,10 @@ This repository supports scenario-based Life Cycle Assessment (LCA) and economic
   - **Reverse Osmosis (RO) membranes)**
 - Cost assessments are scenario-dependent and regionally resolved.
 
----
 
 ## **2. Repository Structure**
 
-### 📁 **Code**
+### **Code**
 
 Includes Python scripts for:
 
@@ -45,7 +43,7 @@ Includes Python scripts for:
 
 🔗 Reference: [Premise GitHub Documentation](https://github.com/polca/premise)
 
-### 📊 **Data**
+### **Data**
 
 Contains all supporting datasets used in the study:
 
@@ -54,7 +52,6 @@ Contains all supporting datasets used in the study:
 - Economic assessments for PFAS removal technologies.
 - Analysis of regional treatment standard impacts.
 
----
 
 ## **3. Tool Dependencies**
 
@@ -68,5 +65,4 @@ To run the full pipeline, the following tools and versions are recommended:
 | Brightway     | 2.5              | LCA modeling environment                 |
 | Ecoinvent     | 3.8              | Baseline LCA database                    |
 
----
 
