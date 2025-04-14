@@ -1,54 +1,72 @@
-# PFAS-Electronics
+# **PFAS-Electronics**
 
-### 1. Overall Use Instructions
-This repository was prepared for analyzing the PFAS removal from the wastewater of electronics and semiconductor manufacturing, incorporating spatiotemporal characteristics.
+This repository contains tools and datasets for analyzing PFAS removal from electronics and semiconductor manufacturing wastewater, incorporating spatiotemporal characteristics and future scenario modeling.
 
-#### - Future Scenarios:
+---
 
-- The **IMAGE 3.2 model** was selected as the primary source of Integrated Assessment Model (IAM) scenarios. There are also some other IAM models were considered
-- The **Premise tool** was used to integrate IAM scenario information into the Life Cycle Assessment (LCA) database.
-LCA Database:
+## **1. Overview and Instructions**
 
-#### - LCA Databse:
-The baseline LCA database is based on Ecoinvent 3.8.
-Subsequent LCA analyses were conducted **using the IAM-enhanced LCA databases generated with Premise, Python, and Brightway**.
-Database Features:
+This repository supports scenario-based Life Cycle Assessment (LCA) and economic analysis of PFAS treatment technologies under various industrial development pathways.
 
-#### - Database Features:
-The generated databases incorporate temporal (year-specific) and regional characteristics, facilitating comprehensive analyses about the treatement of indstries wastewater.
+### 🔮 **Future Scenarios**
 
-#### - Economic model
-The economic model used to measure water treatment is used to treat the costs of three GAC IER RO membrane systems under different scenarios
+- The **IMAGE 3.2** model is used as the primary Integrated Assessment Model (IAM) scenario source. Additional IAM models are referenced where appropriate.
+- The **Premise** tool is applied to integrate IAM scenario outputs into the LCA database.
 
+### ♻️ **LCA Database**
 
-### 2. Section Descriptions:
-#### - Code
-This section provides the code for integrating IAM scenarios with the LCA database using Premise and Brightway.
-Key features of the code include:
-- Integration of IAM and LCA
-  - We provide the code in the Code section for integrating IAM scenarios with the LCA database using Premise and Brightway, with support from the Premise documentation (https://github.com/polca/premise).
-  
-- Electronics and semiconductor market development:
-  - We model the gradual market development and PFAS emissions to wastewater of electronics and semiconductor manufacturing.
-  - The CAGR was used to reflect the development
-  - We also used regional information such as the labor, energy, and other cost to exhibit regional situation
-  - Certain information is compressed into the excel files.
-    
-This section is designed to provide flexible modeling options, reflecting various wastewater emission and manfacturing development speeds.
+- **Baseline data source**: [Ecoinvent 3.8](https://www.ecoinvent.org/).
+- LCA analyses are performed using IAM-informed LCA databases generated via **Premise**, **Brightway**, and **Python**.
+- **Database features**:
+  - Temporal (year-specific) and regional customizations.
+  - Tailored for wastewater treatment analysis in electronics and semiconductor sectors.
 
-#### - Data
+### 💰 **Economic Model**
 
-We present the main data underlying the results of this study, including market development, LCA results under sceanrios, economic analysis of different regions, and the influence of remvoing standards.
+- An economic model estimates the treatment cost of three PFAS removal technologies:
+  - **Granular Activated Carbon (GAC)**
+  - **Ion Exchange Resin (IER)**
+  - **Reverse Osmosis (RO) membranes)**
+- Cost assessments are scenario-dependent and regionally resolved.
 
+---
 
-### 3. Tool Utilization:
+## **2. Repository Structure**
 
-Python 3.9 or higher
+### 📁 **Code**
 
-IMAGE 3.2
+Includes Python scripts for:
 
-Premise 2.3 or higher (Compatibility with Python versions should be considered)
+- **Integrating IAM & LCA data** using Premise and Brightway.
+- **Modeling electronics and semiconductor growth**:
+  - PFAS emission projections based on market development.
+  - CAGR-based scaling and regional factor adjustments (labor, energy, etc.).
+  - Compressed data files (Excel) provide supporting variables and assumptions.
 
-Brightway 2.5
+🔗 Reference: [Premise GitHub Documentation](https://github.com/polca/premise)
 
-Ecoinvent 3.8 or higher (Compatibility with Premise versions should be considered)
+### 📊 **Data**
+
+Contains all supporting datasets used in the study:
+
+- Regional market development and emission projections.
+- Scenario-based LCA results.
+- Economic assessments for PFAS removal technologies.
+- Analysis of regional treatment standard impacts.
+
+---
+
+## **3. Tool Dependencies**
+
+To run the full pipeline, the following tools and versions are recommended:
+
+| Tool          | Minimum Version | Notes                                    |
+|---------------|------------------|------------------------------------------|
+| Python        | 3.9              | Required for Premise and Brightway       |
+| IMAGE         | 3.2              | IAM scenario source                      |
+| Premise       | 2.3              | Compatible with Python 3.9+              |
+| Brightway     | 2.5              | LCA modeling environment                 |
+| Ecoinvent     | 3.8              | Baseline LCA database                    |
+
+---
+
